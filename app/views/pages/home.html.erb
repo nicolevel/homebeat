@@ -1,2 +1,120 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<script>
+  $('.carousel').carousel({
+  interval: false
+  })
+</script>
+
+<script>
+  $(document).ready(function () {
+    var zindex = 10;
+
+    $(".grid-item").mouseover(function () {
+        var clickedElment = ($(this));
+
+        $(".grid-item").find("> .info").removeClass("show-info");
+        $(".grid-item").find("> .info").addClass("hide-info");
+        $(".grid-item").find("> .info button").css("visibility", "collapse");
+
+
+        if (clickedElment.find("> .info").hasClass("hide-info"))
+        {
+            clickedElment.find("> .info").removeClass("hide-info");
+            clickedElment.find("> .info").addClass("show-info");;
+            clickedElment.find("> .info button").css("visibility", "visible");
+        }
+
+    });
+
+
+});
+</script>
+
+<div class="mt-15" style="margin-top: 1%; margin-bottom: 1%;">
+<%= render 'shared/filter' %>
+</div>
+<%= render 'shared/menu' %>
+
+<%= render 'shared/banner' %>
+
+<%= render 'shared/categories' %>
+
+
+<div class="container-fluid">
+
+  <div class="grid-item large floatLeft">
+    <%=image_tag("ad2.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">3D Animated Wolf</div>
+      <div class="date">May 5 2012</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+
+  <div class="grid-item wide floatLeft">
+    <%=image_tag("homebeat.jpg")%>
+    <img src="http://tf3dm.com/imgd/l48919-spaceship-98075.jpg" />
+    <div class="info hide-info">
+      <div class="title">Spaceship</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+  <div class="grid-item medium floatLeft">
+    <%=image_tag("ad4.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">Flat Website UI Template</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+
+  <div class="grid-item medium floatLeft">
+    <%=image_tag("ad5.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">UWP Music App Concept</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+  <div class="grid-item medium floatLeft">
+    <%=image_tag("ad6.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">Surface Phone Concept</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+
+  <div class="grid-item medium floatLeft">
+    <%=image_tag("ad1.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">Title</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+  <div class="grid-item wide floatLeft">
+    <%=image_tag("homebeat2.jpg")%>
+    <div class="info hide-info">
+      <div class="title">Bootstrap Website For a Friend</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+  <div class="grid-item medium floatLeft">
+    <%=image_tag("ad8.jpeg")%>
+    <div class="info hide-info">
+      <div class="title">Title</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+
+  <div class="grid-item wide floatLeft">
+    <%=image_tag("homebeat3.jpg")%>
+    <div class="info hide-info">
+      <div class="title">Title</div>
+      <div class="description">This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc. </div>
+    </div>
+  </div>
+</div>

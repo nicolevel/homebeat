@@ -1,10 +1,13 @@
 class ItemsController < ApplicationController
-    def index
+  add_breadcrumb "Home", :items_path
+
+  def index
     @items = Item.all
   end
 
   def show
-    @items = Item.find(params[:id])
+    @item = Item.find(params[:id])
+    add_breadcrumb @item.name, @item_path
   end
 
   def new
@@ -36,7 +39,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:items).permit(:name, :description, :price, :category, :brand, :color)
+    params.require(:items).permit(:name, :description, :price, :category, :brand, :color, :photo)
   end
 
   def set_item

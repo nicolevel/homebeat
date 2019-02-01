@@ -1,0 +1,22 @@
+
+footer{
+  background-color: #5FB3D5;
+  margin-top: 5%;
+  color: #fff;
+  .row{
+    padding:30px;
+  }
+  .col-md-6{
+    padding:30px;
+  }
+}
+
+
+.ftr a{
+    text-decoration: none !important;
+    color: #fff;
+    &:hover{
+      font-weight: bold !important;
+      color: #fff;
+    }
+  }
