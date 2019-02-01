@@ -19,7 +19,7 @@
 <em class="title mb-3">  <%= @item.key_features %> </em>
 <div class="mb-3">
   <var class="price h3 text-warning">
-    <span class="currency">US $</span><span class="num"> <%= @item.price %> </span>
+    <span class="currency">US $</span><span class="num"> <%= @item.price %>0 </span>
   </var>
 </div> <!-- price-detail-wrap .// -->
 <dl>
@@ -33,6 +33,8 @@
   <dt class="col-sm-3">Color</dt>
   <dd class="col-sm-9"><%= @item.color %> </dd>
 
+  <dt class="col-sm-3">Categoria</dt>
+  <dd class="col-sm-9"><%= @item.category %> </dd>
 </dl>
 <div class="rating-wrap">
 
