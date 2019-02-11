@@ -2,11 +2,7 @@ class ItemsController < ApplicationController
   add_breadcrumb "Home", :items_path
 
   def index
-  if params[:item]
-    @items = Item.filter(params[:item][:category])
-  else
-    @items = Item.all
-  end
+    @items = Item.search(params[:search])
   end
 
   def show
