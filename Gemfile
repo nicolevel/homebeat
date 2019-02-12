@@ -10,6 +10,7 @@ gem 'rails', '5.2.2'
 gem 'redis'
 gem 'rails_admin', '~> 1.3'
 gem 'jquery-rails'
+gem 'elevatezoom-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

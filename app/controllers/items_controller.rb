@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  add_breadcrumb "Home", :items_path
+  add_breadcrumb "Inicio", :items_path
 
   def index
     @items = Item.search(params[:search])
@@ -39,7 +39,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:items).permit(:name, :description, :price, :category, :brand, :color, :photo)
+    params.require(:items).permit(:name, :description, :price, :category, :brand, :color, :photo, :disponible)
   end
 
   def set_item

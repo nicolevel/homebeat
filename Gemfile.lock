@@ -89,6 +89,7 @@ GEM
     dotenv-rails (2.6.0)
       dotenv (= 2.6.0)
       railties (>= 3.2, < 6.0)
+    elevatezoom-rails (1.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -298,6 +299,7 @@ DEPENDENCIES
   cloudinary (~> 1.9.1)
   devise
   dotenv-rails
+  elevatezoom-rails
   font-awesome-sass (~> 5.5.0)
   inline_svg
   jbuilder (~> 2.0)

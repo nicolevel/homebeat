@@ -3,6 +3,10 @@
   width:auto;
 }
 
+nav{
+  margin: 0 !important;
+  // padding: 0 !important;
+}
 // /* adds some margin below the link sets  */
 .navbar .dropdown-menu div[class*="col"] {
    margin-bottom:1rem;
@@ -40,7 +44,7 @@ body {
   left:0;
   right:0;
 /*  height of nav-item  */
-  top:140px;
+  top:100px;
 
   display:block;
   visibility: hidden;
