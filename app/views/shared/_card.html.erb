@@ -1,0 +1,55 @@
+<div class="box-up">
+  <% @items.each do |item| %>
+      <% if item.disponible %>
+
+          <%= cl_image_tag item.photo %>
+          <!-- <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt=""> -->
+          <div class="img-info">
+            <div class="info-inner">
+              <span class="p-name"><%= link_to item.name, item_path(item[:id]) %></span>
+              <span class="p-company"><%= item.brand %></span>
+            </div>
+            <div class="a-size"><%= item.key_features %></div>
+          </div>
+        </div>
+        <div class="box-down">
+          <div class="h-bg">
+            <div class="h-bg-inner"></div>
+          </div>
+
+          <a class="cart" href="#">
+            <span class="price">$ <%= item.price %>0</span>
+            <span class="add-to-cart">
+              <span class="txt"> <% link_to item_path(item[:id]) %> MAS INFO</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <% end %>
+    <% else %>
+      <div class="el-wrapper col-xs-6 col-sm-6 col-md-6 col-lg-3 disable" style="border: 1px solid #D8D8D8;">
+        <div class="box-up">
+          <%= cl_image_tag item.photo %>
+          <!-- <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt=""> -->
+          <div class="img-info">
+            <div class="info-inner">
+              <span class="p-name"><%= link_to item.name, item_path(item[:id]) %></span>
+              <span class="p-company"><%= item.brand %></span>
+            </div>
+            <div class="a-size"><%= item.key_features %></div>
+          </div>
+        </div>
+        <div class="box-down">
+          <div class="h-bg">
+            <div class="h-bg-inner"></div>
+          </div>
+
+          <a class="cart" href="#">
+            <span class="price">$ <%= item.price %>0</span>
+            <span class="add-to-cart">
+              <span class="txt"> <% link_to item_path(item[:id]) %> MAS INFO</span>
+            </span>
+          </a>
+          <% end %>
+        </div>
+

@@ -8,6 +8,8 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     add_breadcrumb @item.name, @item_path
+    @items = Item.all
+
   end
 
   def new
