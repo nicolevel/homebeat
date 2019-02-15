@@ -1,0 +1,14 @@
+<div class="col-sm 12 col-lg-2">
+
+<%= form_tag items_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<%= simple_form_for (Search.new) do |f| %>
+<%= f.input :brand, :collection => %w[Sonos LDSystems], as: :radio_buttons  %>
+<%= f.input :category, :collection => %w[Activo Subwoofers Empotrados ParlantesdeInstalacion ParlanteWireless Soporte SoportedeMuro AdaptadorWireless SubwooferWireless], as: :radio_buttons %>
+<%= f.input :color, :collection => %w[Blanco Negro Blanco&Negro], as: :radio_buttons  %>
+<%= f.button :submit %>
+<% end %>
+</div>

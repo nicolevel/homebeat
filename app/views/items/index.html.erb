@@ -11,44 +11,6 @@ window.smartsupp||(function(d) {
 </script>
 
 
-<div class="col-sm 12 col-lg-2">
 
-<%= form_tag items_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search" %>
-<% end %>
-
-<%#= link_to 'Advancd', new_search_path %>
-
-
-<h3>Search For</h3>
-<%= form_for(Search.new) do |s| %>
-
-
-<hr>
-<h5>Categoria</h5>
-
-<hr>
-
-<%= radio_button_tag(:brand, "Sonos") %>
-<%= label_tag(:Sonos, "Sonos") %>
-<%= radio_button_tag(:brand, "Sony") %>
-<%= label_tag(:Sony, "Sony") %>
-
-<%= s.hidden_field :brand  %>
-
-<hr>
-<h5>Color</h5>
-<hr>
-
-<h5>Precio</h5>
-<div class="field">
-  <p><%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10 %></p>
-  <p><%= s.label :min_price, "Max Price" %> - <%= s.text_field :max_price, size: 10 %></p>
-</div>
-<hr>
-<%= submit_tag "Search" %>
-<% end %>
-</div>
-
+<%= render "shared/filters" %>
 <%= render "shared/cards" %>
